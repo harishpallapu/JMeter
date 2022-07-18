@@ -4,8 +4,9 @@
   become: true
   gather_facts: false
   tasks:
-  
-    - name: pull an image
-      shell: |
-        docker run -it --name jmeter -w /jmeter/bin/project -v ${PWD}:/jmeter/bin/project harishpallapu/jmeter-3i:latest
-        docker stop  jmeter
+    - name: create container jmeter
+
+      docker_container:
+        name: jmeter
+        image: harishpallapu/jmeter-3i:latest
+        state: started
