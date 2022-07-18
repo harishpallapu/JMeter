@@ -6,6 +6,7 @@
   tasks:
     - name: create container jmeter
 
-      shell: |
-         docker run -it --name jmeter harishpallapu/jmeter-3i
-         docker stop jmeter
+      command: "{{item}}"
+      with_items:
+        - docker run -it --name jmeter harishpallapu/jmeter-3i
+
