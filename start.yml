@@ -4,9 +4,7 @@
   become: true
   gather_facts: false
   tasks:
-    - name: create container jmeter
-
-      command: "{{item}}"
-      with_items:
-        - docker run -it --name jmeter harishpallapu/jmeter-3i
+    - name: create container jmeter:
+      shell: |
+        docker run -it --name jmeter harishpallapu/jmeter-3i
 
