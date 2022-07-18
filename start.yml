@@ -4,6 +4,6 @@
   become: true
   gather_facts: false
   tasks:
-    - name: create container jmeter:
+    - name: create container jmeter
       shell: |
         docker run -it --name jmeter -w /jmeter/bin/project  harishpallapu/jmeter-3i:latest
