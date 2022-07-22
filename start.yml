@@ -3,6 +3,9 @@
   hosts: all
   become: true
   gather_facts: false
+  
+  vars_files:
+     - variable.yml
   tasks:
     - name: pull an image
       ansible.builtin.shell: |
