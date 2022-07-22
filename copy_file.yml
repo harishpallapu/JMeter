@@ -1,0 +1,10 @@
+---
+- name: copy file
+  hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+  
+    - name: copy file
+      ansible.builtin.shell: |
+             sudo sshpass -p 'VGn((KE?3@QbN!mocbySZucbLhnHuRBQ' scp -r /home/sample/NRTC_JMeter ssh Administrator@43.204.249.145:C:\
