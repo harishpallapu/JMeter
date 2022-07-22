@@ -2,6 +2,7 @@
 - name: copy file
   hosts: all
   become: true
+  become_method: sudo
   gather_facts: false
   tasks:
   
