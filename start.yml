@@ -4,6 +4,7 @@
   become: true
   gather_facts: false
   tasks:
-    - name: create container jmeter
-      shell: |
-        docker run -it --name jmeter -w /jmeter/bin/project  harishpallapu/jmeter-3i:latest
+    - name: pull an image
+      ansible.builtin.shell: |
+           rm -rf *
+           docker run --rm --name jmeter -w /project -v ${PWD}:/project harishpallapu/jmeter-3i:latest bash -c "git clone "{{ github_url }}" && cd NRTC_JMeter && sh /jmeter/bin/jmeter -n -t *.jmx -l result.jtl -e -o result.html && ls "
