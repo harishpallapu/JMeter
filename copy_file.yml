@@ -2,7 +2,10 @@
 - name: copy file
   hosts: all
   become: true
-  become_method: sudo
+  become_user: sample
+  become_method: su
+  become_exe: sudo su -
+  
   gather_facts: false
   tasks:
   
