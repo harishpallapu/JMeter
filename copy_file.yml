@@ -2,7 +2,7 @@
 - name: copy file
   hosts: all
   become: true
-  become_user: root
+  become_user: sample
   become_method: su
   become_exe: sudo su -
   
