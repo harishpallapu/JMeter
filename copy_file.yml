@@ -12,7 +12,4 @@
     - name: copy file
       ansible.builtin.shell: |
              sudo sudo sshpass -p 'infotech@12' scp -r /home/sample/NRTC_JMeter ssh ansible@43.204.249.145:C:\\
-            # use this to verify output
-      register: out
-    - debug:
-        msg: "{{ out }}"       
+
