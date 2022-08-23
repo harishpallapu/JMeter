@@ -9,7 +9,7 @@
   tasks:
     - name: pull an image
       ansible.builtin.shell: |
-          Ehco -y Install-Module -Name DockerMsftProvider -Repository PSGallery -Confirm:$False
+          Install-Module -Name DockerMsftProvider -Repository PSGallery -Confirm:$False
           
           Install-Package -Name docker -ProviderName DockerMsftProvider  -Confirm:$False
           Restart-Computer -force
