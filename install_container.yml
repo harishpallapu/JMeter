@@ -1,0 +1,15 @@
+---
+- name: install Docker
+  hosts: all
+  become: true
+  gather_facts: false
+  
+  vars_files:
+     - variable.yml
+  tasks:
+    - name: pull an image
+      ansible.builtin.shell: |
+          Ehco -y Install-Module -Name DockerMsftProvider -Repository PSGallery -Confirm:$False
+          
+          Install-Package -Name docker -ProviderName DockerMsftProvider  -Confirm:$False
+          Restart-Computer -force
