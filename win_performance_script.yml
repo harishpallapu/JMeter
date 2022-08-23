@@ -1,5 +1,5 @@
 ---
-- name: Running Docker
+- name: performance_testing
   hosts: all
   become: true
   gather_facts: false
