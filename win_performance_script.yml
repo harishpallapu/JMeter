@@ -1,13 +1,15 @@
 ---
-- name: performance_testing
+- name: copy file
   hosts: all
   become: true
   become_user: sample
   become_method: su
   become_exe: sudo su -
   
+  gather_facts: false
   tasks:
-    - name: pull an image
+  
+    - name: copy file
       ansible.builtin.shell: |
 
            sudo sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.205.111.22
