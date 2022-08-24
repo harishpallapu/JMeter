@@ -2,12 +2,15 @@
 - name: performance_testing
   hosts: all
   become: true
-  gather_facts: false
+  become_user: sample
+  become_method: su
+  become_exe: sudo su -
   
-  vars_files:
-     - win_var_perform.yml
   tasks:
     - name: pull an image
       ansible.builtin.shell: |
+           sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.205.111.22
+           powershell
+           cd Downloads
            Remove-Item -path ${pwd}\* -recurse -force
-           docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/3i-jmeter:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone "{{ github_url }}";C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -n -t "{{ script_name }}"/*.jmx -l result.jtl -e -o result.html;ls;pwd"
+           docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/coma:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone https://github.com/Poornateja2509/NRTC_JMeter.git;C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -n -t NRTC_JMeter/*.jmx -l result.jtl -e -o result.html;ls;pwd"
