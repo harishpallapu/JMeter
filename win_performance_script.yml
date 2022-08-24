@@ -9,7 +9,7 @@
   tasks:
     - name: pull an image
       ansible.builtin.shell: |
-      #ansible.windows.win_powershell: |
+
            sudo sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.205.111.22
            cd Downloads
            Remove-Item -path ${pwd}\* -recurse -force
