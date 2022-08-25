@@ -14,6 +14,5 @@
            sudo sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.204.249.145:C:\Users\ansible\Downloads\\
            powershell
            cd Downloads
-     #      New-Item -Path "c:\" -Name "logfiles" -ItemType "directory"
            Remove-Item -path ${pwd}\* -recurse -force
     #       docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/3i-jmeter:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone https://github.com/Poornateja2509/NRTC_JMeter.git;C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -n -t NRTC_JMeter/*.jmx -l result.jtl -e -o result.html;ls;pwd"
