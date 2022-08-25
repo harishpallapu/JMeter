@@ -11,7 +11,7 @@
   
     - name: copy file
       ansible.builtin.shell: |
-           sudo sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.204.249.145:C:\\
+           sudo sshpass -p 'infotech@12' ssh -o StrictHostKeyChecking=no ansible@43.204.249.145:C:\Users\ansible\Downloads\\
            powershell
            cd Downloads
      #      New-Item -Path "c:\" -Name "logfiles" -ItemType "directory"
