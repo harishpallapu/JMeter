@@ -5,7 +5,7 @@
   gather_facts: false
   
   vars_files:
-     - variable.yml
+     - win_var_perform.yml
   tasks:
     - name: pull an image
       ansible.builtin.shell: |
